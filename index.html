@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAP10</title>
-<link rel="stylesheet" type="text/css" href="app.css">
-<!-- ウェブアプリマニフェストの読み込み -->
-<link rel="manifest" href="manifest.json">
-<!-- ServiceWorkerの登録 -->
-<script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg);
-      });
-}
-</script>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='pragma' content='no-cache' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta charset='utf-8' />
 </head>
-<body>
-
-<section class="container">
-  <h1 class="title">10秒で何回タップできるか</h1>
-  <button id="js-tapBtn" class="btn-tap" disabled>
-    <span id="js-count"></span><br>タップ!!
-  </button>
-  <div class="time">残り時間 <span id="js-time"></span> 秒</div>
-  <button id="js-startBtn" class="btn">START</button>
-</section>
-
-<script src="app.js"></script>
+<body style='background: black; margin: 0; padding: 0; overflow: hidden;'>
+<div id='tululoogame'></div>
+<a style='text-decoration:none;font-size:11px;font-family:arial;color:rgb(255,255,255);' href='http://www.tululoo.com'>Made with Tululoo Game Maker</a>
+<script type='text/javascript' src='game.js'></script>
 </body>
 </html>
